@@ -31,6 +31,10 @@ angular
         templateUrl: 'views/onepagedesigns.html',
         controller: 'OnepagedesignsCtrl'
       })
+      .when('/typography', {
+        templateUrl: 'views/typography.html',
+        controller: 'TypographyCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
