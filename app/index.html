@@ -33,22 +33,27 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">dinp</a>
+            <a class="navbar-brand" href="#/">Design Inspiration</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/one/page/designs">Open Page Designs</a></li>
+              <li><a ng-href="#/typography">Typography</a></li>
+              <li><a ng-href="#/color/palettes">Color Palettes</a></li>
+              <li><a ng-href="#/code/snippets">Code Snippets</a></li>
+              <li><a ng-href="#/ux/ui">UX/UI</a></li>
+              <li><a ng-href="#/hi/def/images">High def Images</a></li>
               <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
     <div ng-view=""></div>
     </div>
 
@@ -88,6 +93,12 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/onepagedesigns.js"></script>
+        <script src="scripts/controllers/typography.js"></script>
+        <script src="scripts/controllers/colorpalettes.js"></script>
+        <script src="scripts/controllers/codesnippets.js"></script>
+        <script src="scripts/controllers/uxui.js"></script>
+        <script src="scripts/controllers/hidefimages.js"></script>
         <!-- endbuild -->
 </body>
 </html>
