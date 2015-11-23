@@ -1,3 +1,13 @@
+.navbar-inverse .navbar-nav > li > a {
+    font-size: 2.5em;
+    color: black;
+}
+
+.navbar-inverse {
+  background-color: #767B8B; 
+  border-top: #767B8B;
+}
+
 .title {
   margin: 0;
   text-align: right;
