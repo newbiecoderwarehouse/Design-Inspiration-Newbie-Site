@@ -1,15 +1,18 @@
-<div class="row">
-<div class="container-fluid">
-  <div class="col-xs-1"></div>
-  <div class="col-xs-10 main-column">
-    p.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ <!-- slider container -->
+    <div class="slider">
 
-  </div>
-  <div class="col-xs-1"></div>
-</div>
-  </div>
+        <!-- enumerate all photos -->
+        <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+
+        <!-- prev / next controls -->
+        <a class="arrow prev" href="#" ng-click="showPrev()">+</a>
+        <a class="arrow next" href="#" ng-click="showNext()">-</a>
+
+        <!-- extra navigation controls -->
+        <ul class="nav-slider">
+            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+                <img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" class="photo" />
+            </li>
+        </ul>
+
+    </div>
