@@ -1,6 +1,9 @@
+'use strict';
+
 /**
  * @namespace codesnippetsLightbox
  */
+
 angular.module('codeSnippetsLightbox', [])
   .controller('CustomsnippetsCtrl', function ($scope, Lightbox) {
     $scope.images = [
