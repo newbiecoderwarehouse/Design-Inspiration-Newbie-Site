@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'bootstrapLightbox'
+    'bootstrapLightbox',
+    'codesnippetsLightbox'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -57,5 +58,6 @@ angular
       });
 
   });
+
 
 
