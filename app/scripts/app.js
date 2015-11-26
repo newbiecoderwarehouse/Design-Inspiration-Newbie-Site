@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'bootstrapLightbox',
-    'codesnippetsLightbox'
+    'codeSnippetsLightbox'
   ])
   .config(function ($routeProvider) {
     $routeProvider

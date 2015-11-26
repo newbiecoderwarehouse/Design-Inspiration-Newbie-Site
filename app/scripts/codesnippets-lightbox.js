@@ -1,7 +1,7 @@
 /**
  * @namespace codesnippetsLightbox
  */
-angular.module('codesnippetsLightbox', [])
+angular.module('codeSnippetsLightbox', [])
   .controller('CustomsnippetsCtrl', function ($scope, Lightbox) {
     $scope.images = [
     {
@@ -27,7 +27,7 @@ angular.module('codesnippetsLightbox', [])
 
   });
 
-angular.module('codesnippetsLightbox').config(function (LightboxProvider) {
+angular.module('codeSnippetsLightbox').config(function (LightboxProvider) {
   // set a custom template
   LightboxProvider.templateUrl = 'views/customLightbox.html';
 });
