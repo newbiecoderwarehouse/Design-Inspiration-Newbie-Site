@@ -2,20 +2,20 @@
 
 /**
  * @ngdoc function
- * @name dinpApp.controller:UxuiCtrl
+ * @name dinpApp.controller:PhotogallerychallengeCtrl
  * @description
- * # UxuiCtrl
+ * # PhotogallerychallengeCtrl
  * Controller of the dinpApp
  */
 angular.module('dinpApp')
-  .controller('UxuiCtrl', function ($scope) {
+  .controller('PhotogallerychallengeCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-       // Set of Photos
+      // Set of Photos
     $scope.photos = [
         {src: 'http://farm9.staticflickr.com/8042/7918423710_e6dd168d7c_b.jpg', desc: 'Image 01'},
         {src: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg', desc: 'Image 02'},
