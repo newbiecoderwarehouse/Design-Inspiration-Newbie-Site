@@ -256,18 +256,40 @@ module.exports = function (grunt) {
          }
        }
      },
-     uglify: {
-       dist: {
-         files: {
-           '<%= yeoman.dist %>/scripts/scripts.js': [
-             '<%= yeoman.dist %>/scripts/scripts.js'
-           ]
-         }
-       }
-     },
-     concat: {
-       dist: {}
-     },
+
+//concat and uglify
+
+concat: {
+    generated: {
+      files: [
+        {
+          dest: '.tmp/concat/js/app.js',
+          src: [
+            'app/scripts/app.js',
+            'app/controllers/main.js',
+            'app/controllers/about.js',
+            'app/controllers/onepagedesigns.js',
+            'app/controllers/typography.js',
+            'app/controllers/colorpalettes.js',
+            'app/controllers/codesnippets.js',
+            'app/controllers/uxui.js',
+            'app/controllers/hidefimages.js'
+          ]
+        }
+      ]
+    }
+  },
+  uglify: {
+    generated: {
+      files: [
+        {
+          dest: 'dist/scripts/app.js',
+          src: [ '.tmp/concat/js/app.js' ]
+        }
+      ]
+    }
+  },
+
 
     imagemin: {
       dist: {
