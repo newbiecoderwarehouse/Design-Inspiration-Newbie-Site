@@ -262,7 +262,8 @@ module.exports = function (grunt) {
 concat: {
     mulitple: {
       files: {
-        '.annotate/concat/concatApc.js': ['.annotate/appPlusControllers.js']
+        '.annotate/concat/concatApc.js': ['.annotate/appPlusControllers.js'],
+        'dist/scripts/newUglify.js':['dist/scripts/newUglify.js']
       },
     },
   },
