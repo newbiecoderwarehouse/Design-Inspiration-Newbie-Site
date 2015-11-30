@@ -260,33 +260,24 @@ module.exports = function (grunt) {
 //concat and uglify
 
 concat: {
-    generated: {
-      files: [
-        {
-          dest: '.tmp/concat/js/app.js',
-          src: [
-            'app/scripts/app.js',
-            'app/controllers/main.js',
-            'app/controllers/about.js',
-            'app/controllers/onepagedesigns.js',
-            'app/controllers/typography.js',
-            'app/controllers/colorpalettes.js',
-            'app/controllers/codesnippets.js',
-            'app/controllers/uxui.js',
-            'app/controllers/hidefimages.js'
-          ]
-        }
-      ]
-    }
+    mulitple: {
+      files: {
+        '.annotate/concat/app.js': ['.annotate/app.js'],
+        '.annotate/concat/mainAbout.js': ['.annotate/controllers/about.js', '.annotate/controllers/main.js'],
+      },
+    },
   },
+  
+  //ugg
   uglify: {
-    generated: {
-      files: [
-        {
-          dest: 'dist/scripts/app.js',
-          src: [ '.tmp/concat/js/app.js' ]
-        }
-      ]
+    options: {
+      mangle: false
+    },
+    myTarget: {
+      files: {
+        '.annotate/uglify/appMainAbout.min.js': ['.annotate/concat/app.js', 'annotate/concat/mainAbout.js'],
+        'dist/scripts/newUglify.js': require('wiredep')().js
+      }
     }
   },
 
@@ -333,16 +324,19 @@ concat: {
 
     // ng-annotate tries to make the code safe for minification automatically
     // by using the Angular long form for dependency injection.
-    ngAnnotate: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/concat/scripts',
-          src: '*.js',
-          dest: '.tmp/concat/scripts'
-        }]
-      }
+//ngAnnotate
+ngAnnotate: {
+    options: {
+        singleQuotes: true
     },
+    app: {
+        files: {
+            '.annotate/app.js': ['app/scripts/app.js'],
+            '.annotate/controllers/about.js': ['app/scripts/controllers/about.js'],
+            '.annotate/controllers/main.js': ['app/scripts/controllers/main.js']
+        }
+    }
+},
 
     // Replace Google CDN references
     cdnify: {
