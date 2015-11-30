@@ -331,9 +331,8 @@ ngAnnotate: {
     },
     app: {
         files: {
-            '.annotate/app.js': ['app/scripts/app.js'],
-            '.annotate/controllers/about.js': ['app/scripts/controllers/about.js'],
-            '.annotate/controllers/main.js': ['app/scripts/controllers/main.js']
+            '.annotate/appPlusControllers.js': ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+
         }
     }
 },
