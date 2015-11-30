@@ -262,8 +262,7 @@ module.exports = function (grunt) {
 concat: {
     mulitple: {
       files: {
-        '.annotate/concat/app.js': ['.annotate/app.js'],
-        '.annotate/concat/mainAbout.js': ['.annotate/controllers/about.js', '.annotate/controllers/main.js'],
+        '.annotate/concat/concatApc.js': ['.annotate/appPlusControllers.js']
       },
     },
   },
