@@ -263,7 +263,7 @@ concat: {
     mulitple: {
       files: {
         '.annotate/concat/concatApc.js': ['.annotate/appPlusControllers.js'],
-        'dist/scripts/newUglify.js':['dist/scripts/newUglify.js']
+        '.annotate/scripts/bowerResources.js':['.annotate/scripts/bowerResources.js']
       },
     },
   },
@@ -275,7 +275,8 @@ concat: {
     },
     myTarget: {
       files: {
-        '.annotate/uglify/appMainAbout.min.js': ['.annotate/concat/app.js', 'annotate/concat/mainAbout.js']
+        '.annotate/apc/appPlusControllersRecord.min.js': ['.annotate/concat/concatApc.js'],
+        '.annotate/scripts/bowerResourcesRecord.min.js':['.annotate/scripts/bowerResources.js']
       }
     }
   },
@@ -331,7 +332,7 @@ ngAnnotate: {
     app: {
         files: {
             '.annotate/appPlusControllers.js': ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-            'dist/scripts/newUglify.js': require('wiredep')().js
+            '.annotate/scripts/bowerResources.js': require('wiredep')().js
 
         }
     }
