@@ -19,8 +19,8 @@ angular.module('dinpApp')
     $scope.myapi = theapi.results;
    });
 
-
-    var galleryTop = new Swiper('.gallery-top', {
+    $(window).load(function(){
+        var galleryTop = new Swiper('.gallery-top', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 10,
@@ -35,7 +35,6 @@ angular.module('dinpApp')
     });
     galleryTop.params.control = galleryThumbs;
     galleryThumbs.params.control = galleryTop;
+    });
 
-     var swipers = $(".angular-slide").length;
-    alert("Num of swiper slides: " + swipers);
   });
