@@ -9,7 +9,7 @@
  */
 angular.module('dinpApp')
   .controller('TypographyCtrl', function ($scope, $http) {
-    $http.get('http://newbiecoderwarehouse.github.io/design-inspiration-api/apis/typography.json').success(function(theapi, response) {
+    $http.get('http://newbiecoderwarehouse.github.io/design-inspiration-api/apis/typography.json').success(function(theapi) {
     $scope.myapi = theapi.results;
     
    	});

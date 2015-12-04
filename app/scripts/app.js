@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'swiperCard'
+    'swiperCard',
+    'swiperThumb'
   ])
   .config(function ($routeProvider) {
     $routeProvider
