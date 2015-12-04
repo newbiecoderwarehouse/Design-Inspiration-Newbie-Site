@@ -9,9 +9,6 @@
  */
 angular.module('dinpApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.welcome = "Get inspired";
+ 
   });
