@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'swiperCard'
   ])
   .config(function ($routeProvider) {
     $routeProvider
