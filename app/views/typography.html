@@ -1,10 +1,7 @@
  <div class="swiper-container gallery-top">
         <div class="swiper-wrapper">
             <div class="swiper-slide angular-slide" ng-repeat="x in myapi">
-                <span style="color: #fff" >{{x.title}}</span>
-                <div class="swiper-slide" style="background-image:url({{x.link}})"></div>
-                 <swiper-card title=x.title>
-
+                 <swiper-card title=x.title link = x.link>
                 </swiper-card>
             </div>
         </div>
