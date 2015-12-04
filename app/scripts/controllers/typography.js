@@ -8,10 +8,12 @@
  * Controller of the dinpApp
  */
 angular.module('dinpApp')
-  .controller('TypographyCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('TypographyCtrl', function ($scope, $http) {
+    $http.get('http://newbiecoderwarehouse.github.io/design-inspiration-api/apis/typography.json').success(function(theapi, response) {
+    $scope.myapi = theapi.results;
+    
+   	});
+
+
+
   });
