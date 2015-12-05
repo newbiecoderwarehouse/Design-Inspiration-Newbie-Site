@@ -11,9 +11,9 @@
     </div>
     <div class="swiper-container gallery-thumbs">
         <div class="swiper-wrapper">
-            <div class="swiper-slide bg-img" ng-repeat="x in myapi">
-                 <swiper-card link = x.link>
-                </swiper-card>
-            </div>
+        <div class="swiper-slide angular-slide" ng-repeat="x in myapi">
+        <swiper-thumb title=x.title link = x.link>
+        </swiper-thumb>
+        </div>
         </div>
     </div>

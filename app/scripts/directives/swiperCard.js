@@ -15,3 +15,17 @@ angular.module('swiperCard', [])
 		// }
 	};	
 	});
+
+angular.module('swiperThumb', [])
+	.directive('swiperThumb', function(){
+	return {
+		restrict: 'E',
+		scope: {
+			title: '=',
+			link: '='
+		},
+		templateUrl: 'views/swiper/swiperThumb.html',
+
+		// }
+	};	
+	});
