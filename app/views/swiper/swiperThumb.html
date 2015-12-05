@@ -1,22 +1,29 @@
 
-            <div class="inner-slide bg-img" style="background-image:url({{link}})">
-            </div>
+<div class="inner-slide bg-img" style="background-image:url({{link}})">
+</div>
 
- <script type="text/javascript">
-        var galleryTop = new Swiper('.gallery-top', {
+<script type="text/javascript">
+    var galleryTop = new Swiper('.gallery-top', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 10,
-        keyboardControl: true
-    	});
+        keyboardControl: true,
+        loop: false,
+    });
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
         centeredSlides: true,
         slidesPerView: 'auto',
         touchRatio: 0.2,
+        keyboardControl: true,
+
         slideToClickedSlide: true
     });
     galleryTop.params.control = galleryThumbs;
     galleryThumbs.params.control = galleryTop;
-	    
+    
+    $(".inner-slide").click(function(){
+      
+        console.log($(this));
+    })
 </script>

@@ -53,3 +53,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+swiper-thumb {
+    height: 100%;
+}
