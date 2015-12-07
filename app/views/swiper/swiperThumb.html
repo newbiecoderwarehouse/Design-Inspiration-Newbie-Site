@@ -7,23 +7,16 @@
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 10,
-        keyboardControl: true,
-        loop: false,
+        keyboardControl: true
     });
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
         centeredSlides: true,
         slidesPerView: 'auto',
         touchRatio: 0.2,
-        keyboardControl: true,
+        slideToClickedSlide: true,
 
-        slideToClickedSlide: true
     });
     galleryTop.params.control = galleryThumbs;
     galleryThumbs.params.control = galleryTop;
-    
-    $(".inner-slide").click(function(){
-      
-        console.log($(this));
-    })
 </script>
