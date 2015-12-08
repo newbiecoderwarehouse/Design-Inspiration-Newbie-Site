@@ -15,7 +15,7 @@ angular.module('dinpApp')
       'Karma'
     ];
 
-    $http.get('http://newbiecoderwarehouse.github.io/design-inspiration-api/apis/colorPalettes.json').success(function(theapi) {
+    $http.get('http://newbiecoderwarehouse.github.io/design-inspiration-api/apis/onePage.json').success(function(theapi) {
     $scope.myapi = theapi.results;
   });
 
