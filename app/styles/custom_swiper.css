@@ -24,19 +24,11 @@ body {
 
 .swiper-content {
     position: absolute;
-    background-color: #000;
-    opacity: .4;
-    left: 0;
-    right: 0;
-    top: 0;
+    right: 20px;
+    top: 55px;
     z-index: 999;
-    width: 100%;
-    text-align: center;
-}
-
-.content-text {
-    color: #fff;
-    font-size: 4em;
+    width: 30%;
+    text-align: right;
 }
 
 .gallery-top {
@@ -71,4 +63,41 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.fa-question-circle {
+    font-size: 40px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.fa-question-circle:hover {
+    color: #1ba2e7;
+    -webkit-transition: all .5s ease;
+       -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+         -o-transition: all .5s ease;
+            transition: all .5s ease;
+}
+
+.hidden-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    border: 1px solid #000;
+    display: block;
+    height: 30px;
+    width: auto;
+}
+
+.content-text {
+    font-size: 14px;
+    line-height: 1.6em;
+    margin: 0;
+    display: inline-block;
+    color: #fff;
+    background: #1F1C1C;
+    padding: 20px;
 }
