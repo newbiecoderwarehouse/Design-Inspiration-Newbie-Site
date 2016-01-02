@@ -1,19 +1,20 @@
- <div class="swiper-container gallery-top">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide angular-slide" ng-repeat="x in myapi">
-                 <swiper-card title=x.title link = x.link>
-                </swiper-card>
-            </div>
-        </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next swiper-button-white"></div>
-        <div class="swiper-button-prev swiper-button-white"></div>
-    </div>
-    <div class="swiper-container gallery-thumbs">
-        <div class="swiper-wrapper">
+<div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
         <div class="swiper-slide angular-slide" ng-repeat="x in myapi">
-        <swiper-thumb title=x.title link = x.link>
-        </swiper-thumb>
-        </div>
+            <swiper-card title=x.title link = x.link class="swiper-content">
+            </swiper-card>
         </div>
     </div>
+<!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+</div>
+
+<div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide angular-slide" ng-repeat="x in myapi">
+            <swiper-thumb title=x.title link = x.link>
+            </swiper-thumb>
+        </div>
+    </div>
+</div>

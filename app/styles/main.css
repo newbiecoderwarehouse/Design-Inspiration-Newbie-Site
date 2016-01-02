@@ -1,11 +1,30 @@
+html,body {
+  text-align:center;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+.content {
+  background-size: 100%;
+  height: 100%;
+}
+
+.nav-btn {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 10px;
+  left: 0px;
+  z-index: 9999;
+}
+
+
 .navbar-inverse .navbar-nav > li > a {
     font-size: 2.5em;
     color: black;
-}
-
-.navbar-inverse {
-  background-color: #767B8B; 
-  border-top: #767B8B;
 }
 
 .title {
@@ -30,27 +49,8 @@
   height: 25%;
   background: #767B8B;
   border-top: 10px solid black;
-
 }
 
-.content {
-background-size: 100%;
-height: 60%;
-}
-
- /*Defaults*/
-html,body {
-  text-align:center;
-    height: 100%;
-    margin:0;
-    padding:0;
-}
-
-body {
-/*For the final layout, there will be a blurred image for the background for the content section*/
-}
-
-/*Default (Not on codepen)*/
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -58,11 +58,133 @@ body {
   padding: 0.2em 0;
 }
 
+ 
+ .con {
+   width: 100px;
+   display: block;
+   margin: 0 auto;
+   top: 50%;
+   position: relative;
+   -webkit-transform: translateY(-50%);
+   -moz-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   -o-transform: translateY(-50%);
+   transform: translateY(-50%);
+ }
+ 
+ .con:hover {
+   cursor: pointer;
+ }
+ 
+ .bar {
+   display: block;
+   height: 3px;
+   width: 30px;
+   background: #fff;
+   margin: 5px auto;
+ }
+ 
+ .middle {
+   margin: 0 auto;
+ }
+ 
+ .bar {
+   display: block;
+   height: 5px;
+   width: 50px;
+   background: #fff;
+   margin: 10px auto;
+ }
+ 
+ .middle {
+   margin: 0 auto;
+ }
+ 
+ .bar {
+   -webkit-transition: all .7s ease;
+   -moz-transition: all .7s ease;
+   -ms-transition: all .7s ease;
+   -o-transition: all .7s ease;
+   transition: all .7s ease;
+ }
+ 
+ .con:hover .top {
+   -webkit-transform: translateY(15px) rotateZ(45deg);
+   -moz-transform: translateY(15px) rotateZ(45deg);
+   -ms-transform: translateY(15px) rotateZ(45deg);
+   -o-transform: translateY(15px) rotateZ(45deg);
+   transform: translateY(15px) rotateZ(45deg);
+ }
+ 
+ .con:hover .bottom {
+   -webkit-transform: translateY(-15px) rotateZ(-45deg);
+   -moz-transform: translateY(-15px) rotateZ(-45deg);
+   -ms-transform: translateY(-15px) rotateZ(-45deg);
+   -o-transform: translateY(-15px) rotateZ(-45deg);
+   transform: translateY(-15px) rotateZ(-45deg);
+ }
+ 
+ .con:hover .middle {
+   width: 1px;
+ }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+ .nav-list {
+   list-style: none;
+   position: relative;
+   top: 100px;
+ }
 
+
+.nav-container {
+    width: 100px;
+    height: 100%;
+    background: #1F1C1C;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-content {
+    height: 100%;
+}
+
+.n-item {
+  height: 60px;
+  width: 60px;
+  margin: 30px auto;
+  border: 2px solid rgba(225,225,225,.7);
+  line-height: 36px;
+  text-align: center;
+}
+
+.n-item a {
+  width: 100%;
+  display: block;
+}
+
+.n-item:hover {
+  border: 1px solid #12abe7;
+}
+
+.n-item:hover a .fa {
+   color: #12abe7;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+       -o-transition: all 1s ease;
+          transition: all 1s ease;
+       -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+           -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+               transform: scale(1.2);
+}
+
+
+.nav-fa {
+  color: #fff;
+  font-size: 18px;
+  line-height: 60px;
+  font-weight: 700;
 }
