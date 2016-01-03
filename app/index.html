@@ -58,8 +58,7 @@
 
           <li class="n-item">
             <a ng-href="#/color/palettes" alt="palettes">
-              <span class="nav-fa icon-color_lens">
-              </span>
+              <i class="fa fa-paint-brush nav-fa"></i>
             </a>
           </li>
 
@@ -123,10 +122,19 @@
         <!-- endbuild -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.6/js/swiper.min.js"></script>
         <script>
-           $(".nav-btn").click(function(){
-        $(this).toggleClass("animated");
-        $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
-       });
+        $(document).keyup(function(e) {
+          if (e.keyCode == 27 && $(".nav-container").hasClass("showNav")) {
+           navMagic();
+          }   // esc
+        });
+        $(".nav-btn").click(function(){
+           navMagic();
+        });
+
+        function navMagic () {
+          $(".nav-btn").toggleClass("animated");
+          $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+        }
         </script>
 </body>
 </html>

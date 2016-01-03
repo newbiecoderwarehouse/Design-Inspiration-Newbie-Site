@@ -25,7 +25,7 @@ body {
 .swiper-content {
     position: absolute;
     right: 20px;
-    top: 55px;
+    top: 0;
     z-index: 999;
     width: 30%;
     text-align: right;
@@ -101,3 +101,4 @@ body {
     background: #1F1C1C;
     padding: 20px;
 }
+
