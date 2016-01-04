@@ -13,13 +13,16 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/bootstrap.css" />
-    <link rel="stylesheet" href="styles/custom_swiper.css">
-    <link rel="stylesheet" href="styles/main.css">
+
+   
     <!-- endbuild -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.6/css/swiper.min.css">
-  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="styles/custom_swiper.css">
+    <link rel="stylesheet" href="styles/main.css">
+    
   </head>
   <body ng-app="dinpApp">
     <!--[if lt IE 7]>
@@ -27,48 +30,63 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="heading-section">
-      <h1 class="title">Web Design Inspiration</h1>
-    </div>
 
     <div ng-view="" class="content"></div>
     
-
-    <div class="footer-links">
-
-<nav class="navbar navbar-inverse navbar-fixed-bottom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-              <li><a ng-href="#/one/page/designs">One Page Designs</a></li>
-              <li><a ng-href="#/typography">Typography</a></li>
-              <li><a ng-href="#/color/palettes">Color Palettes</a></li>
-              <li><a ng-href="#/code/snippets">Code Snippets</a></li>
-              <li><a ng-href="#/ux/ui">UX/UI</a></li>
-              <li><a ng-href="#/hi/def/images">High def Images</a></li>
-              
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a ng-href="#/about">Our Team</a></li>
-            <li><a href="http://bit.ly/newbiecw" target="_blank">Newbie Coder Warehouse</a></li>
-            <li><a ng-href="http://bit.ly/ncw-di" target="_blank">Github Repository</a></li>
-          </ul>
-        </li>      </ul>
-    </div>
-  </div>
-</nav>
+    <div class="nav-btn">
+      <div class="con">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
       </div>
+    </div>
 
+    <div class="nav-container hideNav hidden">
+      <div class="nav-content">
+        <ul class="nav-list">
+          <li class="n-item">
+            <a ng-href="#/">
+              <i class="fa fa-home nav-fa"></i>
+            </a>
+          </li>
+          <li class="n-item">
+            <a ng-href="#/one/page/designs" alt="one-page-designs">
+              <i class="fa fa-list-alt nav-fa"></i>
+            </a>
+          </li>
+
+          <li class="n-item">
+            <a ng-href="#/typography" alt="typography">
+              <i class="fa fa-font nav-fa"></i>
+            </a>
+          </li>
+
+          <li class="n-item">
+            <a ng-href="#/color/palettes" alt="palettes">
+              <i class="fa fa-paint-brush nav-fa"></i>
+            </a>
+          </li>
+
+          <li class="n-item">
+            <a ng-href="#/code/snippets" alt="code-snippets">
+              <i class="fa fa-code nav-fa">
+              </i>
+            </a>
+          </li>
+
+          <li class="n-item">
+            <a ng-href="#/ux/ui" alt="ux/ui">
+              <i class="fa nav-fa">UX</i>
+            </a>
+          </li>
+
+          <li class="n-item">
+            <a ng-href="#/hi/def/images" alt="hi-def-images">
+              <i class="fa fa-photo nav-fa"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -77,7 +95,6 @@
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
        }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
@@ -109,5 +126,20 @@
         <script src="scripts/directives/swiperCard.js"></script>
         <!-- endbuild -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.6/js/swiper.min.js"></script>
+        <script>
+        $(document).keyup(function(e) {
+          if (e.keyCode == 27 && $(".nav-container").hasClass("showNav")) {
+           navMagic();
+          }   // esc
+        });
+        $(".nav-btn").click(function(){
+           navMagic();
+        });
+
+        function navMagic () {
+          $(".nav-btn").toggleClass("animated");
+          $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+        }
+        </script>
 </body>
 </html>
